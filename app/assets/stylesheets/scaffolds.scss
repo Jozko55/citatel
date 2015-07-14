@@ -6,6 +6,8 @@ body {
   line-height: 18px;
 }
 
+
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -69,5 +71,9 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+  }
+
+  table, th, td {
+    border: 3px solid black;
   }
 }
