@@ -4,7 +4,13 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    q = params[:q]
+
+    if q.empty?
+      @books = Book.all
+    else
+      @books = Book.where(["name LIKE ? or description LIKE ?", '%'+ q + '%', '%'+ q + '%'])
+    end
   end
 
   # GET /books/1

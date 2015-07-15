@@ -7,7 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-A teraz je <%= Time.now %> hodin.
+<h1>CITATEL</h1> <h3>Vasa oblubena knizna stranka</h3>
+
+<%= form_tag("/books", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+<% end %>
+
 
 <%= yield %>
 
