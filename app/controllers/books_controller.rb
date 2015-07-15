@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   def index
     q = params[:q]
 
-    if q.empty?
+    if q.nil?
       @books = Book.all
     else
       @books = Book.where(["name LIKE ? or description LIKE ?", '%'+ q + '%', '%'+ q + '%'])
