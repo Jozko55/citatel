@@ -7,16 +7,38 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>CITATEL</h1> <h3>Vasa oblubena knizna stranka</h3>
+<div id="stranka">
 
-<%= form_tag("/books", method: "get") do %>
-    <%= label_tag(:q, "Search for:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-<% end %>
+  <div id="hore">
+
+    <h1>CITATEL</h1>
+    <h3>Vasa oblubena knizna stranka</h3>
+
+    <%= form_tag("/books", method: "get") do %>
+        <%= label_tag(:q, "Vyhladaj knihu:") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Hladaj") %>
+    <% end %>
+  </div>
+
+  <div id="stred">
+    <div id="vlavo">
+    </div>
+    <div id="jadro">
+      <%= yield %>
+    </div>
+    <div id="vpravo">
+    </div>
+  </div>
 
 
-<%= yield %>
+
+</div>
+
+
+
+
+
 
 </body>
 </html>

@@ -1,11 +1,45 @@
+$farba1: midnightblue;
+$farba2: cornflowerblue;
+$farba3: white;
+
 body {
-  background-color: #7fffd4;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
+#stranka {
+  background-color: $farba2;
+  border: solid 10px $farba1;
+  width: 80%;
+  height: 80%;
+  padding: 2%;
+  margin: auto;
+}
+
+#hore {
+  background-color: $farba1;
+  height: 30%;
+  padding: 2%;
+}
+
+label {
+  color: $farba3;
+}
+
+#stred {
+  padding: 2%;
+  background-color: $farba1;
+  height: 70%;
+}
+
+#vlavo {
+  float: left;
+}
+#vpravo {
+  float: right;
+}
 
 
 p, ol, ul, td {
@@ -21,10 +55,10 @@ pre {
 }
 
 a {
-  color: #000;
+  color: $farba2;
 
   &:visited {
-    color: #666;
+    color: red;
   }
 
   &:hover {
@@ -49,6 +83,17 @@ div {
   display: table;
 }
 
+
+table,th, td {
+  border: solid 3px $farba2;
+  color: $farba3;
+  border-collapse: collapse;
+}
+
+h1, h3 {
+  color: $farba3
+}
+
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -56,6 +101,7 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+
 
   h2 {
     text-align: left;
@@ -73,7 +119,4 @@ div {
     list-style: square;
   }
 
-  table, th, td {
-    border: 3px solid black;
-  }
 }
