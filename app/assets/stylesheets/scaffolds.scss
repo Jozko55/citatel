@@ -9,6 +9,11 @@ body {
   line-height: 18px;
 }
 
+.popis {
+  border: solid 2px $farba2;
+  color: $farba3;
+}
+
 #stranka {
   background-color: $farba2;
   border: solid 10px $farba1;
@@ -36,9 +41,15 @@ label {
 
 #vlavo {
   float: left;
+  width: 25%;
 }
 #vpravo {
   float: right;
+  width: 25%;
+}
+
+#jadro {
+  width: 50%;
 }
 
 
@@ -46,6 +57,16 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+h6 {
+  color: $farba2;
+}
+
+.tabulka{
+  width: 60%;
+  margin: 1%;
+  border: 2px;
 }
 
 pre {
@@ -57,14 +78,14 @@ pre {
 a {
   color: $farba2;
 
-  &:visited {
-    color: red;
-  }
-
   &:hover {
     color: #fff;
-    background-color: #000;
   }
+}
+
+.texticek {
+  color: $farba3;
+  padding: 3%;
 }
 
 div {
@@ -77,6 +98,14 @@ div {
   color: green;
 }
 
+.nazov{
+  color: $farba3;
+  background-color: $farba2;
+}
+
+
+
+
 .field_with_errors {
   padding: 2px;
   background-color: red;
@@ -85,12 +114,12 @@ div {
 
 
 table,th, td {
-  border: solid 3px $farba2;
-  color: $farba3;
-  border-collapse: collapse;
+
 }
 
-h1, h3 {
+
+
+h1, h3 , h4 , h2 , h5 {
   color: $farba3
 }
 

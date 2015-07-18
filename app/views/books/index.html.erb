@@ -2,30 +2,20 @@
 
 <h1>Listing Books</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Pocet komentarov</th>
+  <% @books.each do |book| %>
+  <table class="tabulka">
+    <tr bgcolor="#6495ED">
+      <td></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= book.name %></td>
-        <td><%= book.short_description %></td>
-        <td><%= book.comments.count %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Zobraz komentare', book_comments_path(book) %></td>
-        <td><%= link_to 'Novy komentar', new_book_comment_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <tr class="nazov">
+          <td><h3><%= link_to book.name, book, class: "texticek" %></h3></td>
+        </tr>
+        <tr>
+          <td class="popis"><%= book.short_description %><BR><%= %> <%= link_to 'Uprav', edit_book_path(book) %> <%= link_to 'Zobraz komentare', book_comments_path(book) %> <%= link_to 'Novy komentar', new_book_comment_path(book) %></td>
+        </tr>
+  </table>
+    <br>
+  <% end %>
 
 <br>
 
